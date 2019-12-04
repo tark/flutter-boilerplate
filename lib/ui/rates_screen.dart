@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_boilerplate/blocs/favorite_event.dart';
 import 'package:flutter_boilerplate/blocs/rates_bloc.dart';
+import 'package:flutter_boilerplate/localization/localization.dart';
 import 'package:intl/intl.dart';
 
 class RatesScreen extends StatefulWidget {
@@ -24,7 +25,7 @@ class _RatesState extends State<RatesScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Exchange rates'),
+          title: Text(Strings.of(context).exchangeRates),
         ),
         body: Center(
           child: StreamBuilder<List<RateData>>(
