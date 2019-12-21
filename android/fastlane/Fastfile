@@ -16,6 +16,7 @@
 default_platform(:android)
 
 platform :android do
+
   desc "Runs all the tests"
   lane :test do
     gradle(task: "test")
@@ -38,4 +39,11 @@ platform :android do
       skip_upload_changelogs: true
     )
   end
+end
+
+platform :ios do
+  before_all do
+    setup_circle_ci
+  end
+  ...
 end
