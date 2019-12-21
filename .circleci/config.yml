@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  build_android:
+  build:
 
     working_directory: ~/code
     docker:
@@ -26,9 +26,6 @@ jobs:
 #          destination: reports
 #      - store_test_results: # for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
 #          path: app/build/test-results
-  build:
-    - build_android
-
 
 #  build_ios:
 #
