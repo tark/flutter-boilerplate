@@ -16,9 +16,8 @@ jobs:
 #          command: echo $(ls)
           command: |
             echo $PWD
-            ls -aslh .
-            ls -aslh ~
-            ls -aslh ~/tmp
+            echo $CIRCLE_REPOSITORY_URL
+            ls
           #cd ~/project/flutter-boilerplate/android; ./gradlew androidDependencies
 #      - run:
 #          name: Install Flutter
