@@ -14,7 +14,11 @@ jobs:
       - run:
           name: Download Dependencies
 #          command: echo $(ls)
-          command: echo "test"
+          command: |
+            echo $PWD
+            ls -aslh .
+            ls -aslh ~
+            ls -aslh ~/tmp
           #cd ~/project/flutter-boilerplate/android; ./gradlew androidDependencies
 #      - run:
 #          name: Install Flutter
