@@ -20,7 +20,7 @@ jobs:
           #  echo $CIRCLE_REPOSITORY_URL
           #  ls -aslh .
 
-          command: cd /android; ./gradlew androidDependencies
+          command: cd android; ./gradlew androidDependencies
 #      - run:
 #          name: Install Flutter
 #          command: brew install flutter
