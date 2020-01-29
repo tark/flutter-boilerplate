@@ -13,17 +13,18 @@ jobs:
 #          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
           name: Download Dependencies
-          command: ./gradlew androidDependencies
-      - run:
-          name: Install Flutter
-          command: brew install flutter
-      - save_cache:
-          paths:
-            - ~/.gradle
-          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-      - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
-          path: app/build/reports
-          destination: reports
+          command: ls
+#          command: ./gradlew androidDependencies
+#      - run:
+#          name: Install Flutter
+#          command: brew install flutter
+#      - save_cache:
+#          paths:
+#            - ~/.gradle
+#          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
+#      - store_artifacts: # for display in Artifacts: https://circleci.com/docs/2.0/artifacts/
+#          path: app/build/reports
+#          destination: reports
 
 #  build_ios:
 #
