@@ -14,7 +14,7 @@ jobs:
       - run:
           name: Download Dependencies
 #          command: echo $(ls)
-          command: ./android/gradlew androidDependencies
+          command: cd flutter-boilerplate/android; ./gradlew androidDependencies
 #      - run:
 #          name: Install Flutter
 #          command: brew install flutter
