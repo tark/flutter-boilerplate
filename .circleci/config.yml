@@ -13,7 +13,7 @@ jobs:
 #          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
           name: Download Dependencies
-          command: ls
+          command: echo $(ls)
 #          command: ./gradlew androidDependencies
 #      - run:
 #          name: Install Flutter
