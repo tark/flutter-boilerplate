@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    working_directory: ~/project/MyApp
+    working_directory: ~/project
     docker:
       - image: circleci/android:api-25-alpha
     environment:
@@ -17,7 +17,8 @@ jobs:
           command: |
             echo $PWD
             echo $CIRCLE_REPOSITORY_URL
-            ls
+            ls -aslh .
+
           #cd ~/project/flutter-boilerplate/android; ./gradlew androidDependencies
 #      - run:
 #          name: Install Flutter
