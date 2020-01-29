@@ -14,12 +14,13 @@ jobs:
       - run:
           name: Download Dependencies
 #          command: echo $(ls)
-          command: |
-            echo $PWD
-            echo $CIRCLE_REPOSITORY_URL
-            ls -aslh .
 
-          #cd ~/project/flutter-boilerplate/android; ./gradlew androidDependencies
+          #command: |
+          #  echo $PWD
+          #  echo $CIRCLE_REPOSITORY_URL
+          #  ls -aslh .
+
+          command cd /android; ./gradlew androidDependencies
 #      - run:
 #          name: Install Flutter
 #          command: brew install flutter
