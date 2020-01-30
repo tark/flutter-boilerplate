@@ -10,6 +10,7 @@ jobs:
       - checkout:
       - restore_cache:
           key: 1-gems-{{ checksum "Gemfile.lock" }}
+      - run: chown -R $USER:$USER /var/lib/gems/2.5.0
       - run: gem install bundler
       - run: cd android
       - run: bundle check || bundle install --path vendor/bundle
