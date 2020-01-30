@@ -13,7 +13,7 @@ jobs:
 #          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
           name: Install Flutter
-          command: cd ~/development; tar xf ~/Downloads/flutter_linux_v1.12.13+hotfix.7-stable.tar.xz
+          command: mkdir ~/development; cd ~/development; tar xf ~/Downloads/flutter_linux_v1.12.13+hotfix.7-stable.tar.xz
       - run:
           name: Download Dependencies
 #          command: echo $(ls)
