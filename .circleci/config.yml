@@ -10,11 +10,9 @@ jobs:
       - checkout:
       - restore_cache:
           key: 1-gems-{{ checksum "Gemfile.lock" }}
+      - run: cd /android
       - run: bundle check || bundle install --path vendor/bundle
       - save_cache:
           key: 1-gems-{{ checksum "Gemfile.lock" }}
           paths:
             - vendor/bundle
-#      - run:
-#          name: Flutter Build
-#          command: flutter build apk
