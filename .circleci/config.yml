@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/project
     docker:
-      - image: circleci/android:api-25-alpha
+      - image: cirrusci/flutter:latest
     environment:
       JVM_OPTS: -Xmx3200m
     steps:
@@ -11,9 +11,9 @@ jobs:
           path: ~/project
 #      - restore_cache:
 #          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
-      - run:
-          name: Install Flutter
-          command: mkdir ~/development; cd ~/development; tar xf ~/Downloads/flutter_linux_v1.12.13+hotfix.7-stable.tar.xz
+#      - run:
+#          name: Install Flutter
+#          command: mkdir ~/development; cd ~/development; tar xf ~/Downloads/flutter_linux_v1.12.13+hotfix.7-stable.tar.xz
       - run:
           name: Download Dependencies
 #          command: echo $(ls)
