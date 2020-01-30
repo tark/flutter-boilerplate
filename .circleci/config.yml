@@ -8,22 +8,23 @@ jobs:
       JVM_OPTS: -Xmx3200m
     steps:
       - checkout:
-          path: ~/project
+#          path: ~/project
 #      - restore_cache:
 #          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
 #      - run:
 #          name: Install Flutter
 #          command: mkdir ~/development; cd ~/development; tar xf ~/Downloads/flutter_linux_v1.12.13+hotfix.7-stable.tar.xz
       - run:
-          name: Download Dependencies
+          command: flutter doctor
+#          name: Download Dependencies
 #          command: echo $(ls)
 
-          #command: |
-          #  echo $PWD
-          #  echo $CIRCLE_REPOSITORY_URL
-          #  ls -aslh .
+#          #command: |
+#          #  echo $PWD
+#          #  echo $CIRCLE_REPOSITORY_URL
+#          #  ls -aslh .
 
-          command: cd android; ./gradlew androidDependencies
+#          command: cd android; ./gradlew androidDependencies
 #      - save_cache:
 #          paths:
 #            - ~/.gradle
