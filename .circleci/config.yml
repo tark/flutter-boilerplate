@@ -12,6 +12,9 @@ jobs:
 #      - restore_cache:
 #          key: jars-{{ checksum "build.gradle" }}-{{ checksum  "app/build.gradle" }}
       - run:
+          name: Install Flutter
+          command: brew install flutter
+      - run:
           name: Download Dependencies
 #          command: echo $(ls)
 
@@ -21,9 +24,6 @@ jobs:
           #  ls -aslh .
 
           command: cd android; ./gradlew androidDependencies
-#      - run:
-#          name: Install Flutter
-#          command: brew install flutter
 #      - save_cache:
 #          paths:
 #            - ~/.gradle
