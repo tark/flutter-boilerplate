@@ -11,8 +11,8 @@ jobs:
       - restore_cache:
           key: 1-gems-{{ checksum "Gemfile.lock" }}
       - run: whoami 
-      - run: sudo chown -R cirrus:cirrus /var/lib/gems
-      - run: gem install bundler
+#      - run: sudo chown -R cirrus:cirrus /var/lib/gems
+      - run: sudo gem install bundler
       - run: cd android
       - run: bundle check || bundle install --path vendor/bundle
       - save_cache:
