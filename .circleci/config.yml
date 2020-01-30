@@ -15,7 +15,8 @@ jobs:
 #          name: Install Flutter
 #          command: mkdir ~/development; cd ~/development; tar xf ~/Downloads/flutter_linux_v1.12.13+hotfix.7-stable.tar.xz
       - run:
-          command: flutter doctor
+          name: Flutter Build
+          command: flutter build
 #          name: Download Dependencies
 #          command: echo $(ls)
 
