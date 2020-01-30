@@ -12,9 +12,9 @@ jobs:
 #          key: 1-gems-{{ checksum "Gemfile.lock" }}
       - run: whoami
       - run: sudo gem install bundler
-      - run: cd android && bundle check
+#      - run: cd android && bundle check
 #      - run: bundle check
-#      - run: bundle check || bundle install --path vendor/bundle
+      - run: cd android && bundle check || bundle install --path vendor/bundle
 #      - save_cache:
 #          key: 1-gems-{{ checksum "Gemfile.lock" }}
 #          paths:
