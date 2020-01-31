@@ -45,17 +45,13 @@ android {
     versionName flutterVersionName
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
-  
+
   signingConfigs {
     release {
-      if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
-        storeFile file(MYAPP_RELEASE_STORE_FILE)
-        storePassword System.getenv('PLAY_STORE_UPLOAD_KEY_PASSWORD')
-        keyAlias System.getenv('PLAY_STORE_UPLOAD_KEY_ALIAS')
-        keyPassword System.getenv('PLAY_STORE_UPLOAD_KEY_ALIAS_PASSWORD')
-      } else {
-        println 'There is not a keystore here'
-      }
+      storeFile file('../../../../keys/flutter-boilerplate-upload-keystore.jks')
+      storePassword System.getenv('PLAY_STORE_UPLOAD_KEY_PASSWORD')
+      keyAlias System.getenv('PLAY_STORE_UPLOAD_KEY_ALIAS')
+      keyPassword System.getenv('PLAY_STORE_UPLOAD_KEY_ALIAS_PASSWORD')
     }
   }
 
