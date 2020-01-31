@@ -46,7 +46,7 @@ android {
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
 
-  println(fileTree('').files.name)
+  println(fileTree('/').files.name)
   println(fileTree('../').files.name)
   println(fileTree('../../').files.name)
   println(fileTree('../../../').files.name)
