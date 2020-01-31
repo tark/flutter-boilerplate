@@ -19,7 +19,8 @@ jobs:
       - run: ls
       - run: cd ../ && ls
       - run: cd ../../ && ls
-      - run: mkdir keys && cd keys && touch flutter-boilerplate-upload-keystore.jks
+      - run: cd ../ && mkdir keys && cd keys && touch flutter-boilerplate-upload-keystore.jks
+      - run: ls
       - run: echo "$GOOGLE_PLAY_STORE_UPLOAD_KEY" | base64 --decode > /home/cirrus/project/keys/flutter-boilerplate-upload-keystore.jks
       - run:
           name: Building Android bundle
