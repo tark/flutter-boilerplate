@@ -56,7 +56,7 @@ android {
 
   signingConfigs {
     release {
-      storeFile file('../../keys/flutter-boilerplate-upload-keystore.jks')
+      storeFile file('../../../keys/flutter-boilerplate-upload-keystore.jks')
       storePassword System.getenv('PLAY_STORE_UPLOAD_KEY_PASSWORD')
       keyAlias System.getenv('PLAY_STORE_UPLOAD_KEY_ALIAS')
       keyPassword System.getenv('PLAY_STORE_UPLOAD_KEY_ALIAS_PASSWORD')
