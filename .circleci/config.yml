@@ -20,11 +20,12 @@ jobs:
       - run: cd ../ && ls
       - run: cd ../../ && ls
       - run: cd ../ && mkdir keys && cd keys && touch flutter-boilerplate-upload-keystore.jks
-      - run: ls
-      - run: cd ../ && ls
-      - run: cd ../../ && ls
-      - run: echo "$PLAY_STORE_UPLOAD_KEY"
-      - run: echo "$PLAY_STORE_UPLOAD_KEY" | base64 --decode > /home/cirrus/project/keys/flutter-boilerplate-upload-keystore.jks
+      - run: cd ../keys && ls && echo "$PLAY_STORE_UPLOAD_KEY" | base64 --decode > flutter-boilerplate-upload-keystore.jks
+#      - run: ls
+#      - run: cd ../ && ls
+#      - run: cd ../../ && ls
+#      - run: echo "$PLAY_STORE_UPLOAD_KEY"
+#      - run: echo "$PLAY_STORE_UPLOAD_KEY" | base64 --decode > /home/cirrus/project/keys/flutter-boilerplate-upload-keystore.jks
       - run:
           name: Building Android bundle
           command: flutter build appbundle
