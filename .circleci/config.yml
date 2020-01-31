@@ -15,7 +15,7 @@ jobs:
 #      - run: cd android && bundle check
 #      - run: bundle check
       - run: cd android && bundle check || bundle install --path vendor/bundle
-#      - save_cache:
-#          key: 1-gems-{{ checksum "Gemfile.lock" }}
-#          paths:
-#            - vendor/bundle
+      - save_cache:
+          key: 1-gems-{{ checksum "Gemfile.lock" }}
+          paths:
+            - vendor/bundle
