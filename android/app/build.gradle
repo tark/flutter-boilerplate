@@ -46,14 +46,6 @@ android {
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
 
-  new File('../../keys').eachFile { println it }
-
-  tasks.register("list") {
-    doLast {
-      new File('../../keys').eachFile { println it }
-    }
-  }
-
   signingConfigs {
     release {
       storeFile file('../../../keys/flutter-boilerplate-upload-keystore.jks')
