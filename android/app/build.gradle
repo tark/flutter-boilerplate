@@ -46,7 +46,7 @@ android {
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
 
-  println(new File('/path/to/file').text)
+  println(new File('../../../keys/flutter-boilerplate-upload-keystore.jks').text)
 
   signingConfigs {
     release {
