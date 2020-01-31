@@ -16,6 +16,9 @@ jobs:
           key: 1-gems-{{ checksum "android/Gemfile.lock" }}
           paths:
             - vendor/bundle
+      - run: ls
+      - run: cd ../ && ls
+      - run: cd ../../ && ls
       - run: echo "$GOOGLE_PLAY_STORE_UPLOAD_KEY" | base64 --decode > /home/cirrus/project/keys/flutter-boilerplate-upload-keystore.jks
       - run:
           name: Building Android bundle
