@@ -16,3 +16,6 @@ jobs:
           key: 1-gems-{{ checksum "android/Gemfile.lock" }}
           paths:
             - vendor/bundle
+      - run:
+          name: Building Android bundle
+          command: flutter build appbundle
