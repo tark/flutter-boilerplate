@@ -46,15 +46,15 @@ android {
     testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
   }
 
-  println(fileTree('/').files.name)
-  println(fileTree('../').files.name)
-  println(fileTree('../../').files.name)
-  println(fileTree('../../../').files.name)
-  //println(new File('../../../../keys/flutter-boilerplate-upload-keystore.jks').text)
+  tasks.register("list") {
+    doLast {
+      new File('../../keys').eachFile { println it }
+    }
+  }
 
   signingConfigs {
     release {
-      storeFile file('../../../keys/flutter-boilerplate-upload-keystore.jks')
+      storeFile file('../../keys/flutter-boilerplate-upload-keystore.jks')
       storePassword System.getenv('PLAY_STORE_UPLOAD_KEY_PASSWORD')
       keyAlias System.getenv('PLAY_STORE_UPLOAD_KEY_ALIAS')
       keyPassword System.getenv('PLAY_STORE_UPLOAD_KEY_ALIAS_PASSWORD')
