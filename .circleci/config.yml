@@ -35,4 +35,4 @@ jobs:
           command: flutter build appbundle
       - run:
           name: Deploying with Fastlane
-          command: cd android && bundle exec fastlane android
+          command: cd android && bundle exec fastlane android deploy
