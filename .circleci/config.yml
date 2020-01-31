@@ -17,10 +17,14 @@ jobs:
           paths:
             - vendor/bundle
       - run: ls
-      - run: cd ../ && ls
-      - run: cd ../../ && ls
+      - run: ls ../
+      - run: ls ../../
       - run: cd ../ && mkdir keys && cd keys && touch flutter-boilerplate-upload-keystore.jks
       - run: cd ../keys && ls && echo "$PLAY_STORE_UPLOAD_KEY" | base64 --decode > flutter-boilerplate-upload-keystore.jks
+      - run: ls
+      - run: ls ../
+      - run: ls ../../
+
 #      - run: ls
 #      - run: cd ../ && ls
 #      - run: cd ../../ && ls
